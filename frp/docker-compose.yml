@@ -5,6 +5,8 @@ services:
     image: d2x3/frps:1.0.0
     ports:
      - "80:80"
+     - "7000:7000"
+     - "7500:7500"
     volumes:
      - type: bind
        source: ./frps.ini

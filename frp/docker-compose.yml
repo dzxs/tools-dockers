@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  frp:
+    build: .
+    image: d2x3/frps:1.0.0
+    ports:
+     - "80:80"
+    volumes:
+     - type: bind
+       source: ./frps.ini
+       target: /frps/frps.ini
+    restart: always
